@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tu peso en otros planetas</title>
+    <style>
+        body{
+            background-color: rgb(44, 44, 44);
+        }
+        h1,p{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en otros planetas</p>
+    <script>
+        // Gravedades en distintos planetas
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var peso_final;
+        var nombre_planeta;
+        var usuario = parseFloat( prompt("Cual es tu peso?") );
+        var planeta = parseFloat( prompt("Elige tu planeta. \n1. Marte \n2. Jupiter?") );
+        if (planeta == 1) {
+            nombre_planeta = "Marte";
+            peso_final = parseFloat( (usuario * g_marte) / g_tierra );
+        } else if (planeta == 2) {
+            nombre_planeta = "Jupiter";
+            peso_final = parseFloat( (usuario * g_jupiter) / g_tierra );
+        } else {
+            nombre_planeta = "Krypton";
+            peso_final = 1000000;
+        }
+        document.writeln("<p>Tu peso en " + nombre_planeta + " es <strong>" + peso_final + " kilos</strong></p>");
+    </script>
+</body>
+</html>

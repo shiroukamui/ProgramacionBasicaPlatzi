@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Villa Platzi</title>
+    <style>
+    body{
+        background-color: #b1b1b1;
+    }
+    div{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>VILLA PLATZI</h2>
+        <p>
+            Presiona el boton para ver la villa y los animales crearse aleatoriamente
+            <input type="button" value="Poblar Villa" id="poblarVilla">
+        </p>
+        <p>
+            Número de vacas: <span id="vacas"></span>
+            Número de cerdos: <span id="cerdos"></span>
+            Número de pollos: <span id="pollos"></span>
+            Número de granjeros: <span id="granjeros"></span>
+        </p>
+        <canvas width="500" height="500" id="villaPlatzi"></canvas>
+    </div>
+    <script src="villa.js"></script>
+</body>
+</html>

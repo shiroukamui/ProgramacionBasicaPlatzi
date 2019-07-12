@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dibujando en canvas</title>
+    <style>
+        body{
+            background-color: #000000;
+            color: #d3d3d3;
+        }
+        div{
+            margin: 3px 0px 3px 0px;
+            text-align: center;
+        }
+        canvas{
+            margin: 10px 0px 10px 0px;
+            border: 2px solid #90ee90;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Dibujando con mouse en canvas</h1>
+            <p>Manten presionado el botón izquierdo del mouse para dibujar</p>
+            <input type="button" value="Grilla" id="grid">
+            <input type="button" value="Borrar" id="clear">
+        </div>
+        <canvas width="400" height="400" id="drawZone"></canvas>
+        <div>
+            <span>Digita un número para el ancho del pincel</span>
+            <input type="text" id="lineWidth" size="1" value="10">
+        </div>
+        <div>
+            <span>Selecciona un color para el pincel</span>
+            <input type="color" id="color" value="#ed9d5b">
+        </div>
+        <script src="mouse.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

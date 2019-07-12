@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dibujando con canvas</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1,p{
+            color: white;
+        }
+        div{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Dibujo en canvas</h1>
+        <p>
+            Escribe el numero de lineas que quieres dibujar <br>
+            <input type="text" id="lineas" size="5">
+            <span id="salida">?</span>
+            <input type="button" id="pintar" value="Pintar!">
+            <input type="button" id="borrar" value="Borrar!">
+        </p>
+        <canvas width="400" height="400" id="canvas1"></canvas>
+        <p>Así quedo el dibujo</p>
+    </div>
+    <script src="dibujo2.js"></script>
+</body>
+</html>
