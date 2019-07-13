@@ -1,3 +1,4 @@
+
 class Pakiman{
 
     constructor(nombre, palabra, vida, ataque, rutas){
