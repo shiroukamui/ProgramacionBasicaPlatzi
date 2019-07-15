@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cajero Automatico</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: darkolivegreen;
+            font-size: 20px;
+        }
+        .center {
+            text-align: center;
+        }
+        .justify {
+            margin: 0px 150px 0px 150px;
+            text-align: justify;
+        }
+        input[type=number] {
+            width: 60px;
+        }
+        #salida {
+            color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h2>CAJERO AUTOMÁTICO</h2>
+        <h3>En este cajero automatico solo existen las siguientes denominaciones de billetes: $100, $80, $10, $8 y $1. <br> Y existen solo 10 billetes de cada uno.</h3>
+    </div>
+    <div class="justify">
+        <p>
+            Ademas este cajero se concentra en devolver la minima cantidad de billetes posible que complete el valor requerido por el cliente. Ejemplo: la minima cantidad de billetes para completar $160 no es 7, es 2.
+            <ul>
+                <li>
+                    $160 = 1 billete de 100 y 6 de 10. Total 7 billetes.
+                </li>
+                <li>
+                    $160 = 2 billetes de 80. Total 2 billetes.
+                </li>
+            </ul>
+        </p>
+    </div>
+    <div class="center">
+        <span><strong>Por favor ingrese el valor que desea retirar:</strong></span>
+        <input type="text" id="entrada" size="5">
+        <input type="button" id="retirar" value="Retirar">
+        <h4 id="salida"></h4>
+    </div>
+    <script src="Billete.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
