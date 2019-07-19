@@ -1,9 +1,10 @@
 
 class Billete {
 
-    constructor (valor, existencia) {
+    constructor (valor, cantidad, imagen) {
         this.valor = parseInt(valor);
-        this.existencia = parseInt(existencia);
+        this.cantidad = parseInt(cantidad);
+        this.imagen = imagen;
         this.entregado = 0;
     }
 
@@ -12,7 +13,7 @@ class Billete {
      * @returns Cantidad de dinero que hay.
      */
     contar () {
-        return this.valor * this.existencia;
+        return this.valor * this.cantidad;
     }
 
     /**
@@ -21,13 +22,17 @@ class Billete {
      * @param {*} retiro El valor a retirar
      * @returns El saldo del valor si existe o cero en su lugar.
      */
-    entregarBilletes (retiro) {
-        if (this.existencia != 0) {
+    entregarBilletes (retiro, numeroBilletes) {
+        if (this.cantidad != 0) {
             while (this.valor <= retiro) {
                 retiro = retiro - this.valor;
                 this.entregado++;
-                this.existencia--;
-                if (this.existencia == 0) {
+                this.cantidad--;
+                if (this.cantidad == 0) {
+                    break;
+                } else if (1 < numeroBilletes) {
+                    numeroBilletes--;
+                } else if (1 == numeroBilletes) {
                     break;
                 }
             }
@@ -43,9 +48,15 @@ class Billete {
      */
     billetesYsobrante (retiro) {
         let result = [];
+        let cantidadRetiro = Math.floor(retiro / this.valor);
         result.denominacion = this.valor;
-        result.cantidad = Math.floor(retiro / this.valor);
-        result.saldo = retiro % this.valor;
+        if (this.cantidad < cantidadRetiro) {
+            result.cantidad = this.cantidad;
+            result.saldo = retiro - this.cantidad * this.valor;
+        } else {
+            result.cantidad = cantidadRetiro;
+            result.saldo = retiro % this.valor;
+        }
         return result;
     }
 
@@ -56,7 +67,7 @@ class Billete {
     mostrar () {
         let salida = "";
         if (this.entregado != 0) {
-            salida = "Recibiste " + this.entregado + " billetes de $" + this.valor;
+            salida = "Recibiste " + this.entregado + " billetes de $" + this.valor + " <img src='" + this.imagen + "' class='money'>";
         }
         return salida;
     }

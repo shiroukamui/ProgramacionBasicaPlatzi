@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cajero Automatico</title>
+    <title>ATM</title>
     <style>
         body {
             background-color: lightblue;
             color: darkolivegreen;
-            font-size: 20px;
+            font-size: 16px;
+        }
+        input[type=number] {
+            width: 60px;
+        }
+        .info {
+            width: 2%
+        }
+        .money {
+            width: 3%
         }
         .center {
             text-align: center;
@@ -18,8 +27,8 @@
             margin: 0px 150px 0px 150px;
             text-align: justify;
         }
-        input[type=number] {
-            width: 60px;
+        .error {
+            color: red;
         }
         #salida {
             color: darkmagenta;
@@ -35,18 +44,21 @@
         <p>
             Ademas este cajero se concentra en devolver la minima cantidad de billetes posible que complete el valor requerido por el cliente. Ejemplo: la minima cantidad de billetes para completar $160 no es 7, es 2.
             <ul>
-                <li>
-                    $160 = 1 billete de 100 y 6 de 10. Total 7 billetes.
+                <li class="error">
+                    $160 = 1 billete de 100 y 6 de 10. Total 7 billetes.<img src="images/wrong-mark.png" class="info">
                 </li>
                 <li>
-                    $160 = 2 billetes de 80. Total 2 billetes.
+                    $160 = 2 billetes de 80. Total 2 billetes.<img src="images/check-mark.png" class="info">
                 </li>
             </ul>
         </p>
     </div>
     <div class="center">
+        <img src="images/cajero.gif" style="width: 30%">
+    </div>
+    <div class="center">
         <span><strong>Por favor ingrese el valor que desea retirar:</strong></span>
-        <input type="text" id="entrada" size="5">
+        <input type="text" id="dineroRetiro" size="5" value="">
         <input type="button" id="retirar" value="Retirar">
         <h4 id="salida"></h4>
     </div>
