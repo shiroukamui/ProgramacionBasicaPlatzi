@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transferencia Bancaria BanQ</title>
+    <style>
+        body {
+            background-color: #000000dc;
+            color: lightblue;
+            font-size: 16px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: lightcoral;
+        }
+        fieldset {
+            margin: 0px 100px;
+            padding: 0px 50px;
+        }
+        div {
+            display: inline-block;
+        }
+        #datos-cliente {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Banco BanQ</h1>
+    <fieldset>
+        <legend>Transferencia Bancaria</legend><br>
+        Nro. cuenta del cliente: <input type="text" id="cuenta-cliente" title="1234567890" value="1234567890">
+        <button onclick="consultar()">Consultar</button><br><br>
+        <div id="datos-cliente">
+            Saldo cuenta del cliente: <div id="saldo-cliente"></div><br><br>
+            Banco destino de la transferencia: <input list="bancos" id="banco-destino"><br>
+            <datalist id="bancos"></datalist><br>
+            Cuenta destino de la transferencia: <input type="text" id="cuenta-destino"><br><br>
+            Valor de la transferencia: $ <input type="text" id="valor-transferencia">
+            <button onclick="transferir()">Transferir</button>
+            <h3>Importante!!! Recuerde que solo se pueden hacer transferencias en horario de 9 a 12 y de 15 a 20.</h3>
+        </div>
+        <h3 id="error"></h3>
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+</html>

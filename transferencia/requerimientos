@@ -1,0 +1,18 @@
+Banco cliente
+Cuenta cliente
+Saldo cliente
+Banco destino
+Cuenta destino
+Hora de transferencia [0-24]
+
+Transferir 1M USD
+
+Condiciones obligatorias:
+- Cliente verificado (verdadero o falso)
+- Destino verificado (verdadero o falso)
+- Saldo mayor al monto a transferir más costo transacción
+- Solo se pueden hacer transferencias en horas de 9 a 12 y de 15 a 20
+
+Parámetros del costo de transacción:
+- Si el banco destino es el mismo al del cliente el costo de la transferencia es 0 USD.
+- Si el banco destino es diferente al del cliente el costo de la transferencia es 100 USD.
