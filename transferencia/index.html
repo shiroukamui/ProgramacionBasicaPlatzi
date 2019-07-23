@@ -13,7 +13,6 @@
         }
         h1 {
             text-align: center;
-            color: lightcoral;
             font-size: 38px;
         }
         fieldset {
@@ -27,7 +26,7 @@
             display: none;
         }
         #error {
-            text-align: center;
+            text-align: justify;
             color: lightcoral;
         }
         #exito {
@@ -45,11 +44,15 @@
         <div id="datos-cliente">
             Saldo cuenta del cliente: <div id="saldo-cliente"></div><br><br>
             Banco destino de la transferencia: <input list="bancos" id="banco-destino" value="Banco BanQ">
-            <button onclick="limpiarBancoDestino()">Limpiar</button> <br>
+            <button onclick="limpiarBancoDestino()">Limpiar</button><br>
             <datalist id="bancos"></datalist><br>
             Cuenta destino de la transferencia: <input type="text" id="cuenta-destino" title="9876543210" value="9876543210"><br><br>
-            Valor de la transferencia: $ <input type="text" id="valor-transferencia" value="1000">
-            <button onclick="transferir()">Transferir</button>
+            Valor de la transferencia: $ <input type="text" id="valor-transferencia" value="10000">
+            <button onclick="costo()">Costo Transferencia</button><br><br>
+            <div id="bloque-costo-transferencia">
+                Costo de la transferencia: <div id="costo-transferencia"></div>
+                <button onclick="transferir()">Transferir</button>
+            </div>
         </div>
         <h3 id="error"></h3>
         <h3 id="exito"></h3>
